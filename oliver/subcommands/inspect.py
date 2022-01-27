@@ -147,7 +147,7 @@ async def call(args: Dict[str, Any], cromwell: api.CromwellAPI) -> None:
 
     if calls:
         print()
-        reporting.print_dicts_as_table(calls)
+        reporting.print_dicts_as_table(calls, args['grid_style'])
 
 
 def register_subparser(
