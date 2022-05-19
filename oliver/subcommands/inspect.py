@@ -92,11 +92,14 @@ async def call(args: Dict[str, Any], cromwell: api.CromwellAPI) -> None:
                     )
                     + " (In progress)"
                 )
+            else:
+                call_start_date = call_end_date
 
             if call_start_date and call_end_date:
                 call_duration_to_report = reporting.duration_to_text(
                     pendulum.parse(call_end_date) - pendulum.parse(call_start_date)
                 )
+
 
             result = {
                 "Call Name": name,
