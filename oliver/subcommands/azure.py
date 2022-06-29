@@ -57,7 +57,7 @@ def register_subparser(
     cosmos_parser.add_argument(
         "--grid-style",
         help="Any valid `tablefmt` for python-tabulate.",
-        default="fancy_grid",
+        default="simple",
     )
     cosmos_parser.add_argument(
         "--json",

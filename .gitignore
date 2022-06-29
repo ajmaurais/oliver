@@ -1,5 +1,8 @@
 # Custom
 .DS_Store
+bin/*
+profile_data.txt
+poetry.toml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

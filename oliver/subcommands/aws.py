@@ -74,7 +74,7 @@ def register_subparser(
     aggregate_subcommand.add_argument(
         "--grid-style",
         help="Any valid `tablefmt` for python-tabulate.",
-        default="fancy_grid",
+        default="simple",
     )
     _args.add_loglevel_group(aggregate_subcommand)
 

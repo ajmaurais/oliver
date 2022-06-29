@@ -178,7 +178,7 @@ def register_subparser(
     subcommand.add_argument(
         "--grid-style",
         help="Any valid `tablefmt` for python-tabulate.",
-        default="fancy_grid",
+        default="simple",
     )
     subcommand.set_defaults(func=call)
     return subcommand
@@ -187,7 +187,7 @@ def register_subparser(
 def print_workflow_summary(
     workflows: List[Dict[str, Any]],
     metadatas: Dict[str, Any],
-    grid_style: Optional[str] = "fancy_grid",
+    grid_style: Optional[str] = "simple",
 ) -> None:
     """Print a summary of workflow statuses.
 
@@ -224,7 +224,7 @@ def print_workflow_summary(
 def print_workflow_detail_view(
     workflows: List[Dict[str, Any]],
     metadatas: Dict[str, Any],
-    grid_style: str = "fancy_grid",
+    grid_style: str = "simple",
 ) -> None:
     """Print a detailed table of workflow statuses.
 
@@ -253,7 +253,7 @@ def print_workflow_detail_view(
 def print_workflow_steps_view(
     workflows: List[Dict[str, Any]],
     metadatas: Dict[str, Any],
-    grid_style: Optional[str] = "fancy_grid",
+    grid_style: Optional[str] = "simple",
 ) -> None:
     """Print a table summarizing which steps (calls) are in progress.
 

@@ -128,7 +128,7 @@ def register_subparser(
     subcommand.add_argument(
         "--grid-style",
         help="Any valid `tablefmt` for python-tabulate.",
-        default="fancy_grid",
+        default="simple",
     )
 
     subcommand.set_defaults(func=call)

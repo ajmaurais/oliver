@@ -22,7 +22,7 @@ DEFAULT_HEADER_ORDER = [
     "Succeeded",
 ]
 
-DEFAULT_GRID_STYLE = "fancy_grid"
+DEFAULT_GRID_STYLE = "simple"
 
 
 def localize_date(given_date: str) -> str:
@@ -78,7 +78,7 @@ def print_dicts_as_table(
         rows (List[Dict]): Data to be printed structured as a list of dicts.
         grid_style (str, optional): Any valid `tabulate` table format.
                                     See https://github.com/astanin/python-tabulate#table-format
-                                    for more information. Defaults to "fancy_grid".
+                                    for more information. Defaults to "simple".
         clean (bool, optional): Remove all columns consisting of -1 or None.
         fill: value to fill for missing cells.
         header_order (list, optional): if headers exist, these will be put in
@@ -164,7 +164,7 @@ def print_error_as_table(
         message (str): string to put in the "Message" column.
         grid_style (str, optional): Any valid `tabulate` table format.
                                     See https://github.com/astanin/python-tabulate#table-format
-                                    for more information. Defaults to "fancy_grid".
+                                    for more information. Defaults to "simple".
     """
     if grid_style is None:
         grid_style = DEFAULT_GRID_STYLE
