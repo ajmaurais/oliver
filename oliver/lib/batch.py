@@ -53,7 +53,10 @@ def get_workflow_batches(
             )
 
     logger.info(
-        f"Targetting all jobs in batch(es): {', '.join([str(b) for b in _batches])} (original={', '.join([str(b) for b in batches])}, relative={relative})."
+        "Targetting all jobs in batch(es): %s (original=%s, relative=%s).",
+        ", ".join([str(b) for b in _batches]),
+        ", ".join([str(b) for b in batches]),
+        relative,
     )
     return list(filter(lambda w: w.get("batch") in _batches, _workflows))
 

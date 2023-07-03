@@ -18,57 +18,47 @@ classifiers = [
 description = "An opinionated Cromwell orchestration system"
 documentation = "https://stjudecloud.github.io/oliver/"
 homepage = "https://stjudecloud.github.io/oliver/"
-include = [
-  "*.txt",
-  "*.md",
-]
-keywords = [
-  "bioinformatics",
-  "genomics",
-  "workflows",
-  "cromwell",
-]
+include = ["*.txt", "*.md"]
+keywords = ["bioinformatics", "genomics", "workflows", "cromwell"]
 license = "MIT"
 name = "stjudecloud-oliver"
-packages = [
-  {include = "oliver"},
-]
+packages = [{ include = "oliver" }]
 readme = "README.md"
 repository = "https://github.com/stjudecloud/oliver"
-version = "1.4.7"
+version = "1.4.11"
 
 [tool.poetry.scripts]
 oliver = "oliver.__main__:main"
 
 [tool.poetry.dependencies]
-aiohttp = "^3.6.2"
-azure-cosmos = ">=3.1.2,<5.0.0"
-boto3 = "^1.11.9"
-logzero = "^1.5.0"
-mypy-boto3 = {extras = ["batch", "logs"], version = "^1.12.17"}
-mypy_boto3_batch = "^1.12.21"
-mypy_boto3_logs = "^1.12.21"
-pendulum = "^2.0.5"
-python = "^3.9.7"
-requests = "^2.22.0"
-tabulate = "^0.8.6"
-typed-ast = "1.5.2"
+aiohttp = "^3.8"
+azure-cosmos = "^4.3"
+boto3 = "^1.26"
+logzero = "^1.7"
+mypy-boto3 = { extras = ["batch", "logs"], version = "^1.26" }
+mypy_boto3_batch = "^1.26"
+mypy_boto3_logs = "^1.26"
+pendulum = "^2.1"
+python = "^3.9"
+requests = "^2.28"
+tabulate = "^0.9"
+typed-ast = "^1.5"
 tzlocal = "<3.0.0"
 
 [tool.poetry.dev-dependencies]
-black = "^21.11b1"
-boto3-stubs = "^1.12.17"
-mkdocs = "^1.0.4"
-mkdocs-bootswatch = "^1.0"
-mypy = "^0.910"
-pydocstyle = "^6.1.1"
-pylint = "2.12.2"
-pytest = "^6.2.5"
-pytest-asyncio = "^0.16.0"
-pytest-cov = "^3.0.0"
-python-semantic-release = ">=6.0.0"
-rope = "^0.22.0"
-types-tabulate = "^0.8.3"
+black = "^23"
+boto3-stubs = "^1.26"
+mkdocs = "^1.4"
+mkdocs-bootswatch = "^1.1"
+mypy = "0.910"
+pydocstyle = "^6.3"
+pylint = "^2"
+pytest = "^7.2"
+pytest-asyncio = "^0.21"
+pytest-cov = "^4"
+python-semantic-release = "^7.33"
+rope = "^1.7"
+types-tabulate = "^0.9"
 
 [tool.semantic_release]
 build_command = "poetry build"
